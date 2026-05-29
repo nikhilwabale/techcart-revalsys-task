@@ -1,0 +1,12 @@
+import type { Metadata } from "next";
+import CartClient from "./CartClient";
+
+export const metadata: Metadata = {
+  title: "Cart",
+  description: "Review products added to your TechCart shopping cart.",
+  robots: { index: false, follow: false }
+};
+
+export default function CartPage() {
+  return <CartClient />;
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#334155"/><stop offset="1" stop-color="#60a5fa"/></linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffffff" stop-opacity=".9"/><stop offset="1" stop-color="#ffffff" stop-opacity=".35"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="22" stdDeviation="22" flood-color="#020617" flood-opacity=".24"/></filter>
+  </defs>
+  <rect width="900" height="650" rx="0" fill="#f8fafc"/>
+  <rect x="55" y="55" width="790" height="540" rx="46" fill="url(#bg)"/>
+  <circle cx="740" cy="130" r="120" fill="#fff" opacity=".14"/>
+  <circle cx="150" cy="520" r="135" fill="#fff" opacity=".12"/>
+  <g filter="url(#shadow)"><rect x="185" y="130" width="530" height="330" rx="30" fill="#0f172a"/><rect x="215" y="162" width="470" height="250" rx="18" fill="#dbeafe"/><rect x="395" y="460" width="110" height="45" rx="14" fill="#e2e8f0"/><rect x="320" y="505" width="260" height="28" rx="14" fill="#f8fafc"/><circle cx="450" cy="288" r="75" fill="#3b82f6" opacity=".18"/></g>
+  <text x="450" y="540" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="900" fill="white">ViewEdge 27 Monitor</text>
+  <text x="450" y="585" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="white" opacity=".92">Monitor</text>
+</svg>

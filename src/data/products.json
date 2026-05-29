@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "name": "NovaBook Pro 14",
+    "category": "Laptops",
+    "price": 82999,
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1200&q=80",
+    "description": "A lightweight performance laptop with a sharp display, fast SSD storage, and excellent battery life for work and study.",
+    "features": [
+      "14-inch Retina display",
+      "16GB RAM",
+      "512GB SSD",
+      "All-day battery"
+    ],
+    "rating": 4.7,
+    "stock": 12,
+    "featured": true
+  },
+  {
+    "id": 2,
+    "name": "PixelWave Smartphone X",
+    "category": "Mobiles",
+    "price": 52999,
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1200&q=80",
+    "description": "A premium smartphone with a powerful camera, smooth display, and secure face unlock for daily productivity.",
+    "features": [
+      "AMOLED display",
+      "128GB storage",
+      "5G support",
+      "Triple camera"
+    ],
+    "rating": 4.6,
+    "stock": 20,
+    "featured": true
+  },
+  {
+    "id": 3,
+    "name": "SoundMax ANC Headphones",
+    "category": "Accessories",
+    "price": 12999,
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80",
+    "description": "Wireless noise-cancelling headphones designed for clear audio, comfort, and long listening sessions.",
+    "features": [
+      "Active noise cancellation",
+      "40-hour battery",
+      "Bluetooth 5.3",
+      "Fast charging"
+    ],
+    "rating": 4.5,
+    "stock": 30,
+    "featured": true
+  },
+  {
+    "id": 4,
+    "name": "FitPulse Smart Watch",
+    "category": "Wearables",
+    "price": 8999,
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80",
+    "description": "A stylish smartwatch with health tracking, notifications, and workout modes for everyday fitness.",
+    "features": [
+      "Heart-rate tracking",
+      "Sleep monitoring",
+      "Water resistant",
+      "7-day battery"
+    ],
+    "rating": 4.4,
+    "stock": 18,
+    "featured": true
+  },
+  {
+    "id": 5,
+    "name": "ViewEdge 27 Monitor",
+    "category": "Monitors",
+    "price": 21999,
+    "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=1200&q=80",
+    "description": "A 27-inch monitor with slim bezels, high resolution, and vibrant colors for office and creative work.",
+    "features": [
+      "27-inch QHD",
+      "75Hz refresh rate",
+      "HDMI and USB-C",
+      "Eye-care mode"
+    ],
+    "rating": 4.3,
+    "stock": 10,
+    "featured": false
+  },
+  {
+    "id": 6,
+    "name": "RapidCharge Power Bank",
+    "category": "Accessories",
+    "price": 2499,
+    "image": "/images/product-6.svg",
+    "description": "Compact 20000mAh power bank with fast charging support for phones, earbuds, and smart devices.",
+    "features": [
+      "20000mAh capacity",
+      "USB-C output",
+      "Fast charging",
+      "Compact design"
+    ],
+    "rating": 4.2,
+    "stock": 42,
+    "featured": false
+  },
+  {
+    "id": 7,
+    "name": "TypeFlow Mechanical Keyboard",
+    "category": "Accessories",
+    "price": 5499,
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=1200&q=80",
+    "description": "A compact mechanical keyboard with tactile switches, RGB lighting, and durable build quality.",
+    "features": [
+      "Mechanical switches",
+      "RGB backlight",
+      "USB-C",
+      "Compact layout"
+    ],
+    "rating": 4.6,
+    "stock": 25,
+    "featured": false
+  },
+  {
+    "id": 8,
+    "name": "StreamCam HD Webcam",
+    "category": "Accessories",
+    "price": 3999,
+    "image": "https://images.unsplash.com/photo-1587614382346-4ec70e388b28?auto=format&fit=crop&w=1200&q=80",
+    "description": "Full HD webcam with clear video, built-in microphone, and easy plug-and-play setup for meetings.",
+    "features": [
+      "1080p video",
+      "Built-in mic",
+      "Auto light correction",
+      "USB plug and play"
+    ],
+    "rating": 4.1,
+    "stock": 16,
+    "featured": false
+  }
+]

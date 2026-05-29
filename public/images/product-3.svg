@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0f172a"/><stop offset="1" stop-color="#38bdf8"/></linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffffff" stop-opacity=".9"/><stop offset="1" stop-color="#ffffff" stop-opacity=".35"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="22" stdDeviation="22" flood-color="#020617" flood-opacity=".24"/></filter>
+  </defs>
+  <rect width="900" height="650" rx="0" fill="#f8fafc"/>
+  <rect x="55" y="55" width="790" height="540" rx="46" fill="url(#bg)"/>
+  <circle cx="740" cy="130" r="120" fill="#fff" opacity=".14"/>
+  <circle cx="150" cy="520" r="135" fill="#fff" opacity=".12"/>
+  <g filter="url(#shadow)"><path d="M280 325c0-105 75-185 170-185s170 80 170 185" fill="none" stroke="#f8fafc" stroke-width="42" stroke-linecap="round"/><rect x="215" y="300" width="105" height="165" rx="44" fill="#e0f2fe"/><rect x="580" y="300" width="105" height="165" rx="44" fill="#e0f2fe"/><rect x="245" y="330" width="48" height="98" rx="20" fill="#0284c7"/><rect x="607" y="330" width="48" height="98" rx="20" fill="#0284c7"/><circle cx="450" cy="250" r="70" fill="#ffffff" opacity=".2"/></g>
+  <text x="450" y="540" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="900" fill="white">SoundMax ANC Headphones</text>
+  <text x="450" y="585" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="white" opacity=".92">Audio</text>
+</svg>

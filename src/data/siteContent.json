@@ -1,0 +1,49 @@
+{
+  "brand": "TechCart",
+  "tagline": "Smart electronics store",
+  "hero": {
+    "title": "Premium Electronics for Modern Living",
+    "subtitle": "Smart devices, trusted choices",
+    "description": "Discover laptops, smartphones, audio devices, wearables and accessories selected for everyday performance, comfort and value.",
+    "ctaText": "Shop Products",
+    "secondaryCtaText": "Browse Categories",
+    "stats": [
+      "Handpicked Devices",
+      "Fast Shopping Experience",
+      "Secure Demo Checkout"
+    ]
+  },
+  "about": {
+    "title": "About TechCart",
+    "description": "TechCart helps customers explore reliable electronics, compare useful product details and build a cart with a simple, smooth shopping experience. Our showcase focuses on quality gadgets, clear pricing, responsive browsing and customer-friendly product discovery.",
+    "highlights": [
+      "Curated electronics for work, study and entertainment",
+      "Clear product details with pricing and category filtering",
+      "Guest browsing with optional account login",
+      "Simple cart experience designed for fast checkout decisions"
+    ]
+  },
+  "contact": {
+    "email": "support@techcart.com",
+    "phone": "+91 98765 43210",
+    "address": "Pune, Maharashtra, India",
+    "workingHours": "Monday to Saturday, 9:00 AM - 7:00 PM"
+  },
+  "footer": {
+    "description": "TechCart is a customer-focused electronics showcase for discovering smart devices, accessories and everyday tech essentials with a clean and responsive shopping experience.",
+    "quickLinks": [
+      "Products",
+      "About",
+      "Contact",
+      "Cart"
+    ],
+    "categories": [
+      "Laptops",
+      "Mobiles",
+      "Accessories",
+      "Wearables",
+      "Monitors"
+    ],
+    "copyright": "© 2026 TechCart. Demo project for Revalsys Technologies assignment."
+  }
+}
