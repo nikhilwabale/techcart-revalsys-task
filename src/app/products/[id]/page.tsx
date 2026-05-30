@@ -1,3 +1,32 @@
+/**
+ * Product Detail Page — SERVER COMPONENT (SSG with generateStaticParams)
+ *
+ * RENDERING STRATEGY: Static Site Generation (SSG)
+ *
+ * generateStaticParams():
+ * - Runs at BUILD TIME and returns all product IDs
+ * - Next.js pre-renders a separate HTML page for EVERY product
+ * - e.g. /products/1, /products/2 ... /products/20 — all built at build time
+ * - Result: Every product page loads instantly, no server computation per request
+ *
+ * generateMetadata():
+ * - Also runs at BUILD TIME for each product
+ * - Generates unique <title> and <meta description> per product
+ * - e.g. "Dell XPS 15 | TechCart" with product-specific description
+ * - Critical for SEO — each product page is uniquely indexed by Google
+ *
+ * HYDRATION:
+ * - Server sends complete product HTML (image, price, description, features)
+ * - Browser displays it immediately — no JS needed to see content
+ * - React hydrates AddToCartButton (client component) → cart button becomes interactive
+ * - This is why product pages score well on Core Web Vitals (LCP, FID)
+ *
+ * PERFORMANCE:
+ * - priority prop on Image → browser preloads the hero image (improves LCP)
+ * - sizes prop → browser fetches correctly sized image for viewport
+ * - notFound() → returns proper 404 status code for missing products (SEO safe)
+ */
+
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -14,6 +43,7 @@ function getProduct(id: string) {
   return (products as Product[]).find((product) => product.id === Number(id));
 }
 
+// Runs at BUILD TIME — generates unique SEO metadata per product
 export async function generateMetadata({ params }: ProductDetailPageProps): Promise<Metadata> {
   const { id } = await params;
   const product = getProduct(id);
@@ -38,14 +68,21 @@ export async function generateMetadata({ params }: ProductDetailPageProps): Prom
   };
 }
 
+// Runs at BUILD TIME — tells Next.js which product pages to pre-render
+// Without this, Next.js would render product pages on-demand (SSR)
+// With this, all pages are pre-built as static HTML (SSG) — much faster
 export async function generateStaticParams() {
   return (products as Product[]).map((product) => ({ id: product.id.toString() }));
 }
 
+// This function runs on the SERVER (at build time for SSG)
+// It never runs in the browser — safe to read files, access DB, etc.
 export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
   const { id } = await params;
   const product = getProduct(id);
 
+  // notFound() sends a proper 404 HTTP response — good for SEO
+  // Prevents Google from indexing broken product pages
   if (!product) notFound();
 
   return (
@@ -59,7 +96,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
             src={product.image}
             alt={product.name}
             fill
-            priority
+            priority        // Preload this image — improves LCP (Largest Contentful Paint)
             unoptimized
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"
@@ -86,6 +123,11 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
             </ul>
           </div>
 
+          {/*
+            AddToCartButton is a CLIENT component — needs useCart() hook
+            Hydration happens here: server renders a static button shell,
+            React hydrates it in browser → button becomes interactive
+          */}
           <div className="mt-8 max-w-sm">
             <AddToCartButton product={product} />
           </div>

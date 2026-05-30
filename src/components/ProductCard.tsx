@@ -1,7 +1,29 @@
 "use client";
 
+/**
+ * ProductCard — Client Component
+ *
+ * HYDRATION NOTE:
+ * This component is marked "use client" because it uses:
+ * - framer-motion animations (needs browser APIs)
+ * - AddToCartButton (needs CartContext which is client-side)
+ *
+ * HOW HYDRATION WORKS HERE:
+ * 1. Server renders static HTML shell of this card (fast, SEO-readable)
+ * 2. Next.js sends that HTML to browser immediately
+ * 3. React then "hydrates" — attaches event listeners and motion animations
+ * 4. Card becomes interactive (hover effects, add to cart)
+ *
+ * PERFORMANCE:
+ * - Wrapped in React.memo so card only re-renders if its product prop changes
+ * - whileInView animation fires only when card enters viewport (lazy animation)
+ * - viewport: { once: true } means animation plays only once, not on every scroll
+ * - Image uses sizes prop so browser fetches correct size for viewport
+ */
+
 import Image from "next/image";
 import Link from "next/link";
+import { memo } from "react";
 import { motion } from "framer-motion";
 import type { Product } from "@/types/product";
 import AddToCartButton from "./AddToCartButton";
@@ -10,7 +32,7 @@ interface ProductCardProps {
   product: Product;
 }
 
-export default function ProductCard({ product }: ProductCardProps) {
+const ProductCard = memo(function ProductCard({ product }: ProductCardProps) {
   return (
     <motion.article
       initial={{ opacity: 0, y: 18 }}
@@ -48,4 +70,6 @@ export default function ProductCard({ product }: ProductCardProps) {
       </div>
     </motion.article>
   );
-}
+});
+
+export default ProductCard;

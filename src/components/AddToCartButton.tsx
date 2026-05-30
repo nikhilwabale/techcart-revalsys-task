@@ -1,5 +1,31 @@
 "use client";
 
+/**
+ * AddToCartButton — Client Component
+ *
+ * WHY "use client"?
+ * - Uses useCart() hook → needs CartContext (client-side state)
+ * - Has onClick handlers → needs browser event listeners
+ * - Uses framer-motion → needs browser DOM APIs
+ *
+ * HYDRATION IN ACTION — this is the best example in this project:
+ *
+ * BEFORE hydration (server HTML):
+ *   <button>Add to Cart</button>   ← visible but clicking does nothing
+ *
+ * AFTER hydration (React takes over):
+ *   <button onClick={addToCart}>Add to Cart</button>  ← now interactive
+ *
+ * This is exactly what hydration means — React attaches the event listener
+ * to the existing server HTML. The button was always visible, hydration
+ * just made it functional.
+ *
+ * PERFORMANCE:
+ * - This component is lazy — it only hydrates when it enters the viewport
+ *   (because ProductCard uses whileInView from framer-motion)
+ * - useCart() reads from context — no extra API calls or state fetches
+ */
+
 import { motion } from "framer-motion";
 import type { Product } from "@/types/product";
 import { useCart } from "@/context/CartContext";
@@ -9,6 +35,7 @@ export default function AddToCartButton({ product }: { product: Product }) {
   const cartItem = items.find((item) => item.id === product.id);
   const quantity = cartItem?.quantity ?? 0;
 
+  // Quantity stepper — shown when product is already in cart
   if (quantity > 0) {
     return (
       <motion.div
@@ -37,6 +64,7 @@ export default function AddToCartButton({ product }: { product: Product }) {
     );
   }
 
+  // Default Add to Cart button
   return (
     <button
       type="button"
