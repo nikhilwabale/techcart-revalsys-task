@@ -1,15 +1,20 @@
 # TechCart - Next.js Product Showcase
 
-TechCart is a mini electronics product showcase website created for the Revalsys Technologies Next.js + AI task.
+TechCart is a mini electronics product showcase website built for the Revalsys Technologies Next.js + AI developer task.
 
 ## Tech Stack
 
-- Next.js App Router
+- Next.js 15 (App Router)
 - TypeScript
 - Tailwind CSS
-- Static JSON data
-- LocalStorage cart and authentication demo
-- Framer Motion for lightweight drawer animation
+- Framer Motion (animations)
+- Static JSON data (no backend required)
+- localStorage for cart and auth state
+
+## Requirements
+
+- Node.js **v20.19.0** or higher (v22+ also supported)
+- npm **v10** or higher
 
 ## Features
 
@@ -93,7 +98,6 @@ All generated code was reviewed, adjusted and tested manually.
 - Improved footer spacing, alignment, and business-focused content.
 - Improved category spacing and consistent section padding across pages.
 - Replaced external product images with local SVG assets for faster loading and smoother navigation.
-
 
 ## Product Images
 
